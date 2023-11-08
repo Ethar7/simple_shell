@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * cmpr - writes a command prompt
+ * prompt - writes a command prompt
  *
  * Return: 0
  */
@@ -16,5 +16,5 @@ int prompt(void)
 	if (count == -1)
 		exit(0);
 	}
-	return (0);
+	return (0);
 }
