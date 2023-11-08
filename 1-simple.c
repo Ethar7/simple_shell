@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * cmpr - writes a prompt
+ * cmpr - writes a command prompt
  *
  * Return: 0
  */

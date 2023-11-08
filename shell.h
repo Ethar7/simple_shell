@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef SHELL_H
+#define SHELL_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,5 +12,5 @@
 #include <string.h>
 #include <signal.h>
 /*shell functions*/
-
+int prompt(void);
 #endif
