@@ -12,5 +12,5 @@
 #include <string.h>
 #include <signal.h>
 /*shell functions*/
-int prompt(void);
+int cmond_prompt(void);
 #endif
