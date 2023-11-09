@@ -8,6 +8,11 @@
  */
 int main(void)
 {
-	cmond_prompt();
+	char *c;
+	while (1)
+	{
+		c = NULL;
+		cmond_prompt();
+	}
 	return (0);
 }
