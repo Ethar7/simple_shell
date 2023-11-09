@@ -12,5 +12,5 @@ int main(void)
 	{
 		cmond_prompt();
 	}
-	return (0);
+	return (0);
 }
