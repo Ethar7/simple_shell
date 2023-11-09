@@ -5,7 +5,7 @@
  *
  * Return: 0
  */
-int prompt(void)
+int cmond_prompt(void)
 {
 	char *cmpr = "$ ";
 	ssize_t count = 0;
