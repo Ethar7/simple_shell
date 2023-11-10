@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * prompt - writes a command prompt
+ * cmond_prompt - writes a command prompt
  *
  * Return: 0
  */
