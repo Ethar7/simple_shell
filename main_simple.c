@@ -9,6 +9,7 @@
 int main(void)
 {
 	char *c;
+
 	while (1)
 	{
 		c = NULL;
