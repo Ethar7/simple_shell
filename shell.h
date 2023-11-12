@@ -13,6 +13,6 @@
 #include <dirent.h>
 #include <errno.h>
 
-char *read_stdin(void);
 int cmond_prompt(void);
+char *read_stdin(void);
 #endif
