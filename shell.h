@@ -10,6 +10,9 @@
 #include <fcntl.h>
 #include <string.h>
 #include <signal.h>
-/*shell functions*/
+#include <dirent.h>
+#include <errno.h>
+
+char *read_stdin(void);
 int cmond_prompt(void);
 #endif
