@@ -15,4 +15,5 @@
 
 int cmond_prompt(void);
 char *read_stdin(void);
+int string_lenght(char *x);
 #endif
