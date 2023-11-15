@@ -4,7 +4,7 @@
  *
  * Return: 0 on success
 */
-int _env(void)
+int env(void)
 {
 	int j;
 
