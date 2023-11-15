@@ -15,7 +15,7 @@ int _forkpro(char **a, char *buf, char *fullpath)
 	pid = fork();
 	if (pid == 0)
 	{
-		res = execve(fullpath, a, environ);
+		res = execve(fullpath, a, envi);
 		if (res == -1)
 		{
 			perror(a[0]);
