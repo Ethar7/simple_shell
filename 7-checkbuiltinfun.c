@@ -2,7 +2,7 @@
 /**
  * checkbuiltinfun - check if string is a built-in
  * @a: pointer to array
- * @buf: pointer to user 
+ * @buf: pointer to user
  * @status: exit status of execve
  * Return: 1 if user string is equal to env or 0
 */
