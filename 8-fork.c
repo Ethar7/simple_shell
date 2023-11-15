@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * forkpro - create child process
+ * _forkpro - create child process
  * @a: pointer to array of user
  * @buf: pointer to user 
  * @fullpath: pointer to user input
