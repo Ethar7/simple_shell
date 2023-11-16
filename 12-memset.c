@@ -10,7 +10,7 @@ char *_mem(char *a, char x, unsigned int c)
 {
 unsigned int j;
 
-for (j = 0; j < n; j++)
+for (j = 0; j < c; j++)
 a[j] = x;
 return (a);
 }
