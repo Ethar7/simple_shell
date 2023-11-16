@@ -8,7 +8,7 @@ int env(void)
 {
 	int j;
 
-	for (j = 0; envi[j]; j++)
-		putss(envi[j]);
+	for (j = 0; environ[j]; j++)
+		putss(environ[j]);
 	return (0);
 }
