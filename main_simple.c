@@ -33,7 +33,7 @@ int main(void)
 			fullpaths = fullpath(a, Path, cp);
 			if (checkbuiltinfun(a, buf, exitstate) == 1)
 				continue;
-			exitstate = _forkpro(a, buf, fullpath);
+			exitstate = _forkpro(a, buf, fullpaths);
 		}
 		else
 			free(buf);
