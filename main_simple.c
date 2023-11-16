@@ -14,26 +14,26 @@ int main(void)
 	int exitstate = 0;
 
 	signal(SIGINT, SIG_IGN);
-	Path = _getenv("PATH");
+	Path = getenviron("PATH");
 	if (path == NULL)
 		return (-1);
 	while (true)
 	{
 		a = NULL;
-		prompt();
-		buf = _read();
+		cmond_prompt();
+		buf = read_stdin();
 		if (*buf != '\0')
 		{
-			a = tokenize(buf);
+			a = tokenarray(buf);
 			if (a == NULL)
 			{
 				free(buf);
 				continue;
 			}
-			fullpath = _fullpathbuffer(a, path, cp);
-			if (checkbuiltins(a, buf, exitstate) == 1)
+			fullpath = fullpath(a, path, cp);
+			if (checkbuiltinfun(a, buf, exitstate) == 1)
 				continue;
-			exitstatus = _forkprocess(a, buf, fullpath);
+			exitstatus = _forkpro(a, buf, fullpath);
 		}
 		else
 			free(buf);
