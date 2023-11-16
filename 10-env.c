@@ -1,4 +1,5 @@
 #include "shell.h"
+extern char **envi
 /**
  * env - prints the envi
  *
