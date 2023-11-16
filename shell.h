@@ -12,7 +12,7 @@
 #include <signal.h>
 #include <dirent.h>
 #include <errno.h>
-extern char **envi;
+extern char **environ;
 int cmond_prompt(void);
 char *read_stdin(void);
 int string_lenght(char *x);
