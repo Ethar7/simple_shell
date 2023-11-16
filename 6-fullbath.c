@@ -15,12 +15,12 @@ char *fullpath(char **a, char *path, char *cp)
 	struct state x;
 
 	cp = NULL;
-	cp = _strdup(path);
-	pathcount = _splitPATH(cp);
+	cp = stringdupl(path);
+	pathcount = stringcount(cp);
 	token = stringtok(cp, ": =");
 	while (token != '\0')
 	{
-		concatstring = _concat(tm, a, token);
+		concatstring = concat(tm, a, token);
 		if (state(concatstring, &x) == 0)
 		{
 			fullpath = concatstring;
@@ -29,7 +29,7 @@ char *fullpath(char **a, char *path, char *cp)
 		}
 		if (z < pathcount - 2)
 		{
-			token_len = _strlen(token);
+			token_len = string_lenght(token);
 			if (token[token_len + 1] == ':')
 			{
 				if (state(a[0], &x) == 0)
