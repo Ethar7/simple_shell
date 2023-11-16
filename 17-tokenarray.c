@@ -12,17 +12,17 @@ char **tokenarray(char *buf)
 	char *deli = " \n";
 	char **a;
 
-	count = _splitstring(buf);
+	count = stringcount(buf);
 	if (!count)
 		return (NULL);
 	a = malloc((count + 1) * sizeof(char *));
 	if (a == NULL)
 		exit(1);
-	tok = strtok(buf, deli);
+	tok = stringtok(buf, deli);
 	while (tok != NULL)
 	{
-		a[x] = _strdup(tok);
-		tok = strtok(NULL, deli);
+		a[x] = stringdupl(tok);
+		tok = stringtok(NULL, deli);
 		x++;
 	}
 	a[x] = NULL;
