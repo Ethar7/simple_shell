@@ -11,7 +11,7 @@ char *getenviron(const char *nam)
 
 	for (j = 0; envi[j]; j++)
 	{
-		res = _PATHstrcmp(name, envi[j]);
+		res = _pathcmp(nam, envi[j]);
 		if (res == 0)
 		{
 			return (envi[j]);
