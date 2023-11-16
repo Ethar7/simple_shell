@@ -11,11 +11,11 @@ char *concat(char *tmpo, char **a, char *token)
 {
 	int ln = 0;
 
-	_memset(tmpo, 0, 256);
-	ln = _strlen(token) + _strlen(a[0]) + 2;
-	_strcat(tmpo, token);
-	_strcat(tmpo, "/");
-	_strcat(tmpo, a[0]);
+	_mem(tmpo, 0, 256);
+	ln = string_lenght(token) + string_lenght(a[0]) + 2;
+	stringconcat(tmpo, token);
+	stringconcat(tmpo, "/");
+	stringconcat(tmpo, a[0]);
 	tmpo[ln - 1] = '\0';
 	return (tmpo);
 }
