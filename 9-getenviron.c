@@ -1,4 +1,5 @@
 #include "shell.h"
+extern char **envi;
 /**
  * getenviron - gets PATH member
  * @nam: pointer to PATH
