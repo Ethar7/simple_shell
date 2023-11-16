@@ -15,7 +15,7 @@ int main(void)
 
 	signal(SIGINT, SIG_IGN);
 	Path = getenviron("PATH");
-	if (path == NULL)
+	if (Path == NULL)
 		return (-1);
 	while (true)
 	{
@@ -33,7 +33,7 @@ int main(void)
 			fullpath = fullpath(a, path, cp);
 			if (checkbuiltinfun(a, buf, exitstate) == 1)
 				continue;
-			exitstatus = _forkpro(a, buf, fullpath);
+			exitstate = _forkpro(a, buf, fullpath);
 		}
 		else
 			free(buf);
