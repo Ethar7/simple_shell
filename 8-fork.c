@@ -1,4 +1,5 @@
 #include "shell.h"
+extern char **envi;
 /**
  * _forkpro - create child process
  * @a: pointer to array of user
