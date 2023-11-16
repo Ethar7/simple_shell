@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	char *fullpath = NULL, *cp = NULL, *buf = NULL;
+	char *fullpaths = NULL, *cp = NULL, *buf = NULL;
 	char *Path = NULL;
 	char **a;
 	int exitstate = 0;
@@ -17,7 +17,7 @@ int main(void)
 	Path = getenviron("PATH");
 	if (Path == NULL)
 		return (-1);
-	while (true)
+	while (1)
 	{
 		a = NULL;
 		cmond_prompt();
@@ -30,7 +30,7 @@ int main(void)
 				free(buf);
 				continue;
 			}
-			fullpath = fullpath(a, path, cp);
+			fullpaths = fullpath(a, Path, cp);
 			if (checkbuiltinfun(a, buf, exitstate) == 1)
 				continue;
 			exitstate = _forkpro(a, buf, fullpath);
