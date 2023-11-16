@@ -12,16 +12,16 @@ char *fullpath(char **a, char *path, char *cp)
 	char *token, *fullpath = NULL, *concatstring = NULL;
 	static char tm[256];
 	int pathcount = 0, flag = 0, n = 0, token_len = 0;
-	struct state x;
+	struct stat x;
 
 	cp = NULL;
 	cp = stringdupl(path);
 	pathcount = stringcount(cp);
 	token = stringtok(cp, ": =");
-	while (token != '\0')
+	while (token != NULL)
 	{
 		concatstring = concat(tm, a, token);
-		if (state(concatstring, &x) == 0)
+		if (stat(concatstring, &x) == 0)
 		{
 			fullpath = concatstring;
 			flag = 1;
@@ -32,7 +32,7 @@ char *fullpath(char **a, char *path, char *cp)
 			token_len = string_lenght(token);
 			if (token[token_len + 1] == ':')
 			{
-				if (state(a[0], &x) == 0)
+				if (stat(a[0], &x) == 0)
 				{
 					fullpath = a[0];
 					flag = 1;
