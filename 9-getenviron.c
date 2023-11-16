@@ -9,12 +9,12 @@ char *getenviron(const char *nam)
 {
 	int j, res;
 
-	for (j = 0; envi[j]; j++)
+	for (j = 0; environ[j]; j++)
 	{
-		res = _pathcmp(nam, envi[j]);
+		res = _pathcmp(nam, environ[j]);
 		if (res == 0)
 		{
-			return (envi[j]);
+			return (environ[j]);
 		}
 	}
 	return (NULL);
