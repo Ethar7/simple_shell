@@ -14,7 +14,7 @@ int checkbuiltinfun(char **a, char *buf, int status)
 	{
 		env();
 		for (j = 0; a[j]; j++)
-			free(a[i]);
+			free(a[j]);
 		free(a);
 		free(buf);
 		return (1);
