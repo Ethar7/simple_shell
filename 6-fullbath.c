@@ -27,7 +27,7 @@ char *fullpath(char **a, char *path, char *cp)
 			flag = 1;
 			break;
 		}
-		if (z < pathcount - 2)
+		if (n < pathcount - 2)
 		{
 			token_len = string_lenght(token);
 			if (token[token_len + 1] == ':')
